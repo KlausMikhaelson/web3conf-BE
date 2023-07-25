@@ -3,13 +3,14 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const http = require("http");
+const PORT = process.env.PORT || 4000;
 
 const connectionInfo = [];
 app.use(express.json());
 app.use(cors());
 
 // servers starts listening
-const server = app.listen(4000, () => {
+const server = app.listen(PORT, () => {
   console.log("Server started at 4000");
 });
 
