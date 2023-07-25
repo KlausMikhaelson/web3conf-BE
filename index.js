@@ -14,6 +14,10 @@ const server = app.listen(PORT, () => {
   console.log("Server started at 4000");
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
